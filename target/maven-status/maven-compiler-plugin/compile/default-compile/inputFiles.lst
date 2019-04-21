@@ -1,4 +1,4 @@
-C:\Dev\Workspace\pers\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\ServletInitializer.java
-C:\Dev\Workspace\pers\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\Application.java
-C:\Dev\Workspace\pers\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\Greeting.java
-C:\Dev\Workspace\pers\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\GreetingController.java
+C:\Users\hellsis\git\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\Application.java
+C:\Users\hellsis\git\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\controllers\GoogleController.java
+C:\Users\hellsis\git\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\service\GoogleTokenVerifierService.java
+C:\Users\hellsis\git\HellsingTokenValidationService\src\main\java\io\hellsing\tokenservice\service\impl\GoogleTokenVerifierServiceImpl.java

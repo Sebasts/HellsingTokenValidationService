@@ -1,4 +1,5 @@
+io\hellsing\tokenservice\controllers\GoogleController.class
+io\hellsing\tokenservice\service\impl\GoogleTokenVerifierServiceImpl$1.class
 io\hellsing\tokenservice\Application.class
-io\hellsing\tokenservice\ServletInitializer.class
-io\hellsing\tokenservice\Greeting.class
-io\hellsing\tokenservice\GreetingController.class
+io\hellsing\tokenservice\service\GoogleTokenVerifierService.class
+io\hellsing\tokenservice\service\impl\GoogleTokenVerifierServiceImpl.class

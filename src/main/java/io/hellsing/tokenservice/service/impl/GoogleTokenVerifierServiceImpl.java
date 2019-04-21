@@ -20,27 +20,27 @@ import io.hellsing.tokenservice.service.GoogleTokenVerifierService;
 public class GoogleTokenVerifierServiceImpl implements GoogleTokenVerifierService {
 
 	private final String TOKENINFO_ENDPOINT = "https://oauth2.googleapis.com/tokeninfo?";
-	
-	public boolean verifyOauthToken(String token) {
+
+	public String verifyOauthToken(String token) {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
 		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 		Map<String, String> args = new HashMap<String, String>();
 		args.put("id_token", token);
-		String response;
 		ObjectMapper objectMapper = Jackson2ObjectMapperBuilder.json().build();
-		
+
 		try {
-			ResponseEntity<String> reviewResponse = restTemplate.exchange(TOKENINFO_ENDPOINT, HttpMethod.GET, entity, String.class, args);
-			Map<String, Object> map 
-			  = objectMapper.readValue(reviewResponse.getBody(), new TypeReference<Map<String,Object>>(){});
-			System.out.println(map);
+			ResponseEntity<String> reviewResponse = restTemplate.exchange(TOKENINFO_ENDPOINT + "id_token=" + token, HttpMethod.GET, entity,
+					String.class, args);
+			Map<String, Object> map = objectMapper.readValue(reviewResponse.getBody(),
+					new TypeReference<Map<String, Object>>() {
+					});
+			return token;
 		} catch (Exception e) {
 			e.printStackTrace(System.out);
-			System.out.println(e.getLocalizedMessage());
-}
+		}
 
-		return true;
+		return "bad req";
 	}
 
 }
