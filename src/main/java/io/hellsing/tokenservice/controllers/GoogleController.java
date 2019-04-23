@@ -23,7 +23,7 @@ public class GoogleController {
     
     @RequestMapping(value = "/api/tokenservice/google", method = RequestMethod.POST )
     @ResponseBody
-    public ResponseEntity validateToken(@RequestParam(value = "token", required = true)String token) {
+    public ResponseEntity validateToken(@RequestParam(value = "token", required = false)String token) {
     	System.out.println(token);
     	if(! gtvs.verifyOauthToken(token).equals("bad req")) {
     		return new ResponseEntity(token, HttpStatus.OK);
